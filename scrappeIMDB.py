@@ -26,7 +26,7 @@ try:
         
         year = movie.find('td', class_="titleColumn").span.text.strip('()')
         
-        rating = movie.find('td', class_="ratingColumn imbRating").strong.text
+        rating = movie.find('td', class_="ratingColumn imbRating").text.strong
         
         print(rank, name, year,rating)
         sheet.append([rank, name, year,rating])
